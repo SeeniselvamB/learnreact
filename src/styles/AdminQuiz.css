@@ -1,0 +1,243 @@
+.quizpage-container {
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f6fa, #e9ecf5);
+    min-height: 85vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.5s ease;
+}
+
+.quizpage-container h2 {
+    text-align: center;
+    color: #2f3640;
+    margin-bottom: 35px;
+    font-size: 1.9rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 550px;
+    margin: 0 auto 45px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.quiz-form input[type="text"],
+.quiz-form input[type="number"] {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.2s ease;
+}
+
+.quiz-form input:focus {
+    outline: none;
+    border: 2px solid #3742fa;
+    box-shadow: 0 0 8px rgba(55, 66, 250, 0.3);
+}
+
+.quiz-form button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-form button:first-of-type {
+    background: #3742fa;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(55, 66, 250, 0.3);
+}
+
+.quiz-form button:first-of-type:hover {
+    background: #5352ed;
+    transform: scale(1.05);
+}
+
+.quiz-form button:last-of-type {
+    background: #dcdde1;
+    color: #2f3640;
+}
+
+.quiz-form button:last-of-type:hover {
+    background: #c1c1c1;
+}
+
+/* QUIZ LIST SECTIONS */
+.unsaved-quizzes, .saved-quizzes {
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.unsaved-quizzes:hover, .saved-quizzes:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* HEADER STYLES */
+.unsaved-quizzes h3, .saved-quizzes h3 {
+    margin-bottom: 18px;
+    color: #2f3640;
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: 3px solid #3742fa;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.unsaved-quizzes h3:hover, .saved-quizzes h3:hover {
+    color: #3742fa;
+}
+
+/* DIFFERENT ACCENT FOR SAVED QUIZZES */
+.saved-quizzes {
+    background: linear-gradient(135deg, #ffffff, #f7faff);
+    border-left: 6px solid #2ed573;
+}
+
+.saved-quizzes h3 {
+    border-color: #2ed573;
+}
+
+.saved-quizzes li {
+    border-left: 5px solid #2ed573;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height:1.5 ;
+}
+.saved-quizzes .quiz-question {
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 0.2;
+    display: block;             /* Ensures question stays vertical before options */
+    margin-bottom: 8px;
+}
+
+/* LIST STYLING */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background: #f1f2f6;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+li:hover {
+    background: #e6e8f5;
+    transform: translateY(-2px);
+}
+
+li ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+li ul li {
+    background: #e7e7e7;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+}
+
+li ul li:hover {
+    background: #dcdde1;
+}
+
+li .quiz-question {
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.5;
+}
+/* BUTTONS INSIDE LIST */
+li button {
+    margin-right: 10px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li button:first-of-type {
+    background: #3742fa;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(55, 66, 250, 0.3);
+}
+
+li button:first-of-type:hover {
+    background: #5352ed;
+    transform: scale(1.07);
+}
+
+li button:last-of-type {
+    background: #ff4757;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3);
+}
+
+li button:last-of-type:hover {
+    background: #ff6b81;
+    transform: scale(1.07);
+}
+
+/* SAVE ALL BUTTON */
+.save-all-btn {
+    margin-top: 18px;
+    padding: 12px 22px;
+    background: #2ed573;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(46, 213, 115, 0.3);
+    transition: all 0.3s ease;
+}
+
+.save-all-btn:hover {
+    background: #27ae60;
+    transform: scale(1.07);
+    box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
+}
+
+/* ANIMATION FOR NEWLY SAVED QUIZZES */
+@keyframes highlightFade {
+    0% { background-color: #c8f7c5; }
+    100% { background-color: #ffffff; }
+}
+
+.saved-quizzes li.newly-saved {
+    animation: highlightFade 1.5s ease-in-out;
+}

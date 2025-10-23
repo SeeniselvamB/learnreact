@@ -1,0 +1,266 @@
+/* InstructorDashboard.css / AdminDashboard.css */
+
+/* General dashboard container */
+.dashboard-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.dashboard-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Admin/Instructor info and logout */
+.admin-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin-info span {
+    font-size: 16px;
+}
+
+.logout-btn {
+    padding: 6px 12px;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    background-color: #1976d2;
+    color: white;
+    border-color: #1976d2;
+}
+
+.tab-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Tab content */
+.tab-content {
+    min-height: 400px;
+}
+
+/* Table styling for courses & users */
+.dashboard-table,
+.manageuser-table,
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.dashboard-table th,
+.dashboard-table td,
+.manageuser-table th,
+.manageuser-table td,
+.modal-table th,
+.modal-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.dashboard-table th,
+.manageuser-table th,
+.modal-table th {
+    background-color: #4a90e2;
+}
+
+.course-score.completed {
+    color: green;
+    font-weight: bold;
+}
+
+.course-score.not-started {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Buttons inside tables */
+.edit-btn,
+.delete-btn,
+.view-btn-right {
+    padding: 4px 8px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.edit-btn {
+    background-color: #1976d2;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.view-btn-right {
+    background-color: #4caf50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #115293;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.view-btn-right:hover {
+    background-color: #388e3c;
+}
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Form inside modal */
+.manageuser-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.manageuser-form input,
+.manageuser-form select {
+    width: 100%;
+    padding: 6px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-btn {
+    padding: 8px 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #115293;
+}
+
+/* Role badges */
+.role-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.role-badge.student {
+    background-color: #4caf50;
+}
+
+.role-badge.admin {
+    background-color: #1976d2;
+}
+
+.role-badge.instructor {
+    background-color: #ff9800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .admin-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tab-btn {
+        width: 100%;
+    }
+}

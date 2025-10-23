@@ -1,0 +1,79 @@
+.quizpage-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+.quizpage-container h2 {
+    margin-bottom: 15px;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-question h4 {
+    margin-bottom: 10px;
+}
+
+.quiz-question ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.quiz-question li {
+    margin-bottom: 8px;
+}
+
+.quiz-question input[type="radio"] {
+    margin-right: 8px;
+}
+
+.submit-btn, .close-quiz-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.close-quiz-btn {
+    background-color: #f44336;
+    color: white;
+}
+.quizpage-container {
+    position: relative; /* Make container the reference for absolute positioning */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.close-quiz-btn {
+    position: absolute; /* Position relative to container */
+    top: 10px;           /* distance from top */
+    right: 10px;         /* distance from right */
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.close-quiz-btn:hover {
+    background-color: #d32f2f;
+}

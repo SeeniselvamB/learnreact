@@ -1,0 +1,81 @@
+.dashboard-container {
+    padding: 30px;
+    min-height: 90vh;
+    background: #f5f6fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h2 {
+    font-size: 2rem;
+    color: #2f3640;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    background: #dcdde1;
+    color: #2f3640;
+}
+
+.tabs button:hover {
+    background: #c1c1c1;
+    transform: scale(1.05);
+}
+
+.tabs button.active {
+    background: #3742fa;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(55, 66, 250, 0.4);
+}
+
+.logout-btn {
+    background: #ff4757;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #ff6b81;
+    transform: scale(1.05);
+}
+
+.tab-content {
+    margin-top: 30px;
+}
+
+/* Responsive grid for course lists or profile cards inside tabs */
+.tab-content > div {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+}
