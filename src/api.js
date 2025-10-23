@@ -1,7 +1,8 @@
 import axios from "axios";
 import { getToken, setToken} from "./jwt";
 const api = axios.create({
-    baseURL: "http://localhost:8080/api",
+    baseURL: "https://learnspring-production.up.railway.app/api",
+    // baseURL: "http://localhost:8080/api",
     // baseURL: "https://8080-bebbbaadcbdafadabdcfaceddbbabeaeefcea.premiumproject.examly.io/api",
     headers: { "Content-Type": "application/json" },
 });
